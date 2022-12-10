@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATS VS WITCHES</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="main.js" async></script> 
+</head>
+
+
+<body>
+        <div id = "UI">
+            Le maitre chat vous demande de proteger cette plaine des sorcieres
+        </div>
+
+        <!-- Sprites des personnages -->
+        <div id = "Ennemis">
+            <img src = "Ennemis/Blue_witch.png" id = "Sorciere1" class = "ennemi" onclick = "null">
+            <img src = "Ennemis/Green_witch.png" id = "Sorciere2" class = "ennemi" onclick = "null">
+            <img src = "Ennemis/Pink_witch.png" id = "Sorciere3" class = "ennemi" onclick = "null">
+
+            <!-- PV des sorcieres -->
+            <div id = "PVSorciere1">
+                100/100
+            </div>
+            <div id = "PVSorciere2">
+                100/100
+            </div>
+            <div id = "PVSorciere3">
+                100/100
+            </div>
+        </div>
+        
+        <div id="Heros">
+            <img src="Heros/Black_Cat.png" id = "Chat1" class = "hero" >
+            <img src="Heros/Calico_Cat.png" id = "Chat2" class = "hero" >
+            <img src="Heros/Orange_Cat.png" id = "Chat3" class = "hero" >
+            <img src="Heros/White_Cat.png" id = "Chat4" class = "hero" >
+        </div> 
+
+
+
+        <!-- Attaque -->
+
+        <div id = "attaque">
+
+            <!-- Creation des boutons de stats des heros -->
+            <section id = "boutonsHeros"> 
+
+                <button id = "bouton" onclick = "showSkillChatN()"  title = "Test_title">
+                    <div class = "Heros">
+                        PV : <div id = PVChat1> 150 </div>
+                        <br>
+                        PA : <div id = PAChat1> 50 </div>
+                        <br>
+                    </div>
+                        Chat Noir
+                </button> 
+
+                <button id = "bouton" onclick="showSkillChatC()"  title = "Test_title">
+                    <div class="Heros"> 
+                        PV : <div id=PVChat2> 150 </div>
+                        <br>
+                        PA : <div id = PAChat2> 50 </div>
+                        <br>
+                    </div>
+                        Chat Calico
+                </button>
+
+                <button id="bouton" onclick="showSkillChatO()"  title="Test_title">
+                    <div class="Heros"> 
+                        PV : <div id=PVChat3> 150 </div>
+                        <br>
+                        PA : <div id = PAChat3> 50 </div>
+                        <br>
+                    </div>
+                        Chat Roux
+                </button>
+
+                <button id="bouton" onclick="showSkillChatB()"  title="Test_title">
+                    <div class="Heros"> 
+                        PV : <div id=PVChat4> 150 </div>
+                        <br>
+                        PA : <div id = PAChat4> 50 </div>
+                        <br>
+                    </div>
+                        Chat Blanc
+                </button>
+        
+            </section>
+        
+
+
+        <section id = "choixChatNoir">
+            <div id="skillChatN" style = "display:none">
+                <div>
+                    <button id = "attaqueChatNoir" onclick = "attaque_chatNoir()">
+                        Attaque
+                        <br><br>
+                        Le chat Noir attaque !
+                    </button>
+                </div>
+                <br>
+
+                <div>
+                    <button id="defenseChatNoir" onclick = "defense_chatNoir()">
+                        Défense
+                        <br><br>
+                        Le chat Noir se defend !
+                    </button>
+                </div>
+                <br>
+
+                <div>
+                    <button id = "speChatNoir" onclick="spe_chatNoir()">
+                        Spécial (25 PA)
+                        <br><br>
+                        Gros coup d'epee
+                    </button>
+                </div>
+            </div>        
+        </section>
+
+
+        <section id = "choixChatCalico">
+            <div id = "skillChatC" style = "display:none">
+                <div>
+                    <button id = "attaqueChatCalico" onclick = "attaque_chatCalico()">
+                        Attaque
+                        <br><br>
+                        Le chat Calico attaque !
+                    </button>
+                </div>
+                <br>
+
+                <div>
+                    <button id = "defenseChatCalico" onclick = "defense_chatCalico()">
+                        Défense
+                        <br><br>
+                        Le chat Calico se defend !
+                    </button>
+                </div>
+                <br>
+
+                <div>
+                    <button id = "speChatCalico" onclick = "spe_chatCalico()">
+                        Spécial (25 PA)
+                        <br><br>
+                        Coup de foudre
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id = "choixChatOrange">
+            <div id = "skillChatO" style = "display:none">
+                <div>
+                    <button id = "attaqueChatOrange" onclick = "attaque_chatOrange()">
+                        Attaque
+                        <br><br>
+                        Le chat Orange attaque !
+                    </button>
+                </div>
+                <br>
+
+                <div>
+                    <button id = "defenseChatOrange" onclick = "defense_chatOrange()">
+                        Défense
+                        <br><br>
+                        Le chat Orange se defend !
+                    </button>
+                </div>
+                <br>
+
+                <div>
+                    <button id = "speChatOrange" onclick = "speChatOrange()">
+                        Spécial (25 PA)
+                        <br><br>
+                        Boule de feu
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id = "choixChatBlanc">
+            <div id = "skillChatB" style = "display:none">
+                <div>
+                    <button id = "attaqueChatBlanc" onclick = "attaque_chatBlanc()">
+                        Attaque
+                        <br><br>
+                        Le chatBlanc attaque !
+                    </button>
+                </div>
+                <br>
+
+                <div>
+                    <button id = "defenseChatBlanc" onclick = "defense_chatBlanc()">
+                        Défense
+                        <br><br>
+                        Le chat Blanc se defend !
+                    </button>
+                </div>
+                <br>
+
+                <div>
+                    <button id = "speChatBlanc" onclick = "spe_ChatBlanc()">
+                        Spécial (25 PA)
+                        <br><br>
+                        Pics de glace
+                    </button>
+                </div>
+
+            </div>
+        </section>
+</body>
+</html>

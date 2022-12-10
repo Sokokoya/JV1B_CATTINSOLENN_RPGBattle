@@ -1,0 +1,181 @@
+body {
+    background-image: url('Background/background.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* Placement, taille et couleur de la boite de dialogue */
+#UI {
+    height: 20%;
+    text-align: center;
+    color: rgb(50, 72, 85);
+    border: rgb(50, 72, 85) 3px solid;
+    background-color: #e6bda5;
+}
+
+
+/* Taille des images des personnages */
+.hero {
+    height: 30%;
+    width: 14%;
+}
+
+.ennemi {
+    height: 15%;
+    width: 15%;
+}
+
+
+/* Placement des images dans la page web */
+#Heros {
+    margin-top: 12%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: flex-end;
+}
+
+#Ennemis {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+/* Couleur de la zone d'attaque */
+#attaque {
+    border: rgb(14, 22, 17) 2px solid;
+    background-color: #2a442a;
+}
+
+/* Placement des boutons heros sous les heros */
+#boutonsHeros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom:0;
+}
+
+#bouton {
+    height: 15%;
+    width: 15%;
+    background:#e6bda5;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Placement, taille et couleur des boites PV des ennemis */
+#PVSorciere1 {
+    position: absolute;
+    left: 10%;
+    z-index: 1;
+    top: 5%;
+    border: rgb(50, 72, 85) 2px solid;
+    background-color: #e6bda5;
+    visibility: hidden;
+}
+
+#PVSorciere2 {
+    position: absolute;
+    z-index: 1;
+    top: 4%;
+    border: rgb(50, 72, 85) 2px solid;
+    background-color: #e6bda5;
+    visibility: hidden;
+}
+
+#PVSorciere3 {
+    position: absolute;
+    right: 10%;
+    z-index: 1;
+    top: 5%;
+    border: rgb(50, 72, 85) 2px solid;
+    background-color: #e6bda5;
+    visibility: hidden;
+}
+
+#Sorciere1:hover ~ #PVSorciere1{ 
+    visibility: visible;
+}
+
+#Sorciere2:hover ~ #PVSorciere2{ 
+    visibility: visible;
+}
+
+#Sorciere3:hover ~ #PVSorciere3{ 
+    visibility: visible;
+}
+
+
+/* Placement et couleur des boite de choix d'action des heros*/
+
+#skillChatN {
+    height: 10%;
+    width: 13%;
+    background: #e6bda5;
+    display: flex;
+    justify-content: space-around; 
+}
+
+#skillChatC {
+    height: 100%;
+    width: 80%;
+    background: #e6bda5;
+    display: flex;
+    justify-content: space-around; 
+}
+
+#skillChatO {
+    height: 100%;
+    width: 80%;
+    background: #e6bda5;
+    display: flex;
+    justify-content: space-around; 
+}
+
+#skillChatB {
+    height: 100%;
+    width: 80%;
+    background: #e6bda5;
+    display: flex;
+    justify-content: space-around; 
+}
+
+
+/* Boites de stats des heros */
+
+#choixChatNoir {
+    margin-left: 7.5%;
+    margin-top: 10px;
+    display: flex;
+}
+
+
+#choixChatCalico {
+    margin-left: 32.5%;
+    margin-top: 10px;
+    display: flex;
+}
+
+#choixChatOrange {
+    margin-left: 57.5%;
+    margin-top: 10px;
+    display: flex;
+}
+
+#choixChoixBlanc {
+    margin-left: 83%;
+    margin-top: 10px;
+    display: flex;
+}
+
+
+
+
+
+
+
+
